@@ -28,8 +28,12 @@ Initialization
 
 Calling remote method
 ```
-    MyNamespace.Mew.Test.split('Bla bla bla bla', '-', function(result) {
+    MyNamespace.Mew.Test.split('Bla bla bla bla', ' ', function(result) {
       //the callback for async query
-      console.log(result);
+      console.log(result); // result: ['Bla', 'bla', 'bla', 'bla']
     });
 ```
+
+Protocol description and links to a server-side implementation.
+http://www.sencha.com/products/extjs/extdirect
+php - https://github.com/Martin17/ExtDirect
