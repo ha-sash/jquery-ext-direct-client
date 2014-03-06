@@ -36,4 +36,27 @@ Calling remote method
 
 Protocol description and links to a server-side implementation.
 http://www.sencha.com/products/extjs/extdirect
-php - https://github.com/Martin17/ExtDirect
+
+
+Example server-side implementation using the library https://github.com/Martin17/ExtDirect
+```
+<?php
+    // file: /url/path/to/direct/api/index.php
+
+    class Test {
+        public function split($string, $delimiter) {
+            return explode(" ", $string);
+        }
+    } 
+    
+    header('Content-type: application/json');
+
+    Ext\Direct::$namespace   = 'MyNamespace.Mew';
+    Ext\Direct::$descriptor  = 'My API';
+    Ext\Direct::$id          = 'testid';
+    Ext\Direct::$url         = '/url/path/to/direct/api';
+
+    Ext\Direct::provide(['Test']);
+
+?>
+```
