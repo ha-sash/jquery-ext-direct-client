@@ -45,7 +45,7 @@ Example server-side implementation using the library https://github.com/Martin17
 
     class Test {
         public function split($string, $delimiter) {
-            return explode(" ", $string);
+            return explode($delimiter, $string);
         }
     } 
     
